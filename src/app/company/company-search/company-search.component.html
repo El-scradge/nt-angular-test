@@ -1,0 +1,6 @@
+<div class="search-box__container">
+  <form (ngSubmit)="submitSearch(searchForm)" #searchForm="ngForm">
+    <input type="text" id="search" name="search" required ngModel placeholder="Company Name or Number">
+    <button class="button" type="submit" [disabled]="!searchForm.valid">Search</button>
+  </form>
+</div>

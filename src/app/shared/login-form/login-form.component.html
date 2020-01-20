@@ -1,0 +1,8 @@
+<form (ngSubmit)="onLoginAction(loginForm)" #loginForm="ngForm">
+  <label for="username">Username</label>
+  <input type="text" required ngModel name="username" id="username">
+  <label for="password">Password</label>
+  <input type="password" required ngModel name="password" id="password">
+  <button class="button" type="submit" [disabled]="!loginForm.valid">Log in</button>
+</form>
+<div class="error__message" *ngIf="errorMessage">{{errorMessage}}</div>

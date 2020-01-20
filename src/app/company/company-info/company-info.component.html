@@ -1,0 +1,27 @@
+
+<article>
+  <h3>{{currentCompany.title}}</h3>
+  <span>Company number <strong>{{currentCompany.company_number}}</strong></span>
+  <ul class="company__info">
+    <li>
+      <span>Registered office address</span><br>
+      <strong> {{currentCompany.address_snippet}}</strong>
+
+    </li>
+    <li>
+      <span>Company Status</span><br>
+      <strong>{{currentCompany.company_status | titlecase}}</strong>
+    </li>
+    <li>
+      <span>Company Type</span><br>
+      <strong>{{currentCompany.company_type}}</strong>
+    </li>
+    <li>
+      <span>Incorporated on</span><br>
+      <strong>{{currentCompany.date_of_creation | date: 'dd MMMM yyyy'}}</strong>
+    </li>
+    <li><a [routerLink]="['../', currentCompany.company_number , 'officers']">List Officers</a></li>
+  </ul>
+
+</article>
+

@@ -1,0 +1,7 @@
+@import "../../../assets/scss/variables";
+
+.search__item {
+  margin: $baseline/4 $baseline/2;
+  padding: $baseline/2 $baseline/4;
+  border-bottom: 2px solid dimgrey;
+}

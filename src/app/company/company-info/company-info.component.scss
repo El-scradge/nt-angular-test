@@ -1,0 +1,15 @@
+@import "../../../assets/scss/variables";
+.company__info {
+
+   padding: $baseline/2;
+   margin: $baseline/2;
+
+   border-radius: $baseline/2;
+   border: solid grey 1px;
+   background: lighten(lightgray, 10px);
+   list-style: none;
+
+   li {
+     padding-bottom: $baseline/4;
+   }
+ }

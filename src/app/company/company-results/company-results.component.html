@@ -1,0 +1,10 @@
+<p>company-results works!</p>
+<h4>Search Results</h4>
+
+<section class="search__content">
+  <article class="search__item" *ngFor="let company of companyList.items">
+    <h4><a (click)="onMoreCompanyDetails(company)">{{company.title}}</a></h4>
+    <p>{{company.description}}</p>
+    <p>{{company.address_snippet}}</p>
+  </article>
+</section>
