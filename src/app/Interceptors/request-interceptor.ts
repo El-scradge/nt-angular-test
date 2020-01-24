@@ -12,16 +12,17 @@ export class RequestInterceptor implements HttpInterceptor {
 
   intercept(
     req: HttpRequest<any>,
-    next: HttpHandler):
-    Observable<HttpEvent<any>> {
-    let customHeaders: HttpHeaders = new HttpHeaders();
+    next: HttpHandler){
+      let customHeaders: HttpHeaders = new HttpHeaders();
 
     customHeaders = customHeaders.set('x-api-key', environment.apiKey);
-
+    
     const apiRequest = req.clone({
-      headers: customHeaders
+      setHeaders: {''x-api-key: environment.apiKey}
     });
-    return next.handle(apiRequest);
+    return next.handle(apiRequest).pipe(catchError( (error:HttpErrorResponse) => {
+      return throwError(error);
+    }));
   }
 
 
