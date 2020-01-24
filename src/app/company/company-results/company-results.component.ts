@@ -24,7 +24,8 @@ export class CompanyResultsComponent implements OnInit, OnDestroy {
       this.companyList = data;
     }));
     this.subscriptions.push(this.companyService.searchOptions.subscribe( result => {
-      //this.searchCompanies(result);
+      console.log(result);
+      this.searchCompanies(result.search);
     }));
   }
 

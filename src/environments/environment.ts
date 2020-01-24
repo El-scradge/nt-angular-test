@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'https://angular-exercise.trunarrative.cloud/TruProxyAPI/rest/',
-  apiKey: ''
+  apiKey: 'cV4k44RA6556FUuQNZUll1Yh4tIubw0te7DrIpai'
 };
 
 /*
